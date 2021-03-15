@@ -19,3 +19,19 @@ jobs:
 
       run: |
         python hello.py
+
+
+  YoudaoNote-checkin:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup-python
+        uses: actions/setup-python@master
+        with:
+          python-version: 3.7
+
+      - name: checkin
+        run: |
+          python3 hello.py
